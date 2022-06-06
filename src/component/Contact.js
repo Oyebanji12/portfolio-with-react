@@ -17,22 +17,26 @@ const Contact = () => {
     console.log(e.target.value)
     setMsg(e.target.value)
   }
-  function handleSubmit(e){
+  function handleSubmit(event){
     console.log(`${nm} ${em} ${msg}`)
-    e.preventDefault()
+    
+    
   }
   return (
     <div>
          <section id="contacts">
-        <form action='https://getform.io/f/c7e20834-9cc8-4818-a1b7-9d0cfc35072d' method='POST' onSubmit={handleSubmit}
-    
-          className=" container mx-auto  lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        
           <h2 className="text-black sm:text-4xl text-3xl mb-1 font-medium title-font text-center"  >
             Contact Me
           </h2>
           <p className="leading-relaxed mb-5 text-center">
             Get in touch
           </p>
+
+          <form action='https://getform.io/f/c7e20834-9cc8-4818-a1b7-9d0cfc35072d' method='POST' onSubmit={handleSubmit}
+    
+    className=" container mx-auto  lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+
           <div className="relative mb-4">
             <label  className="leading-7 text-sm text-gray-400">
               Name
